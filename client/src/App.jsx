@@ -1,10 +1,10 @@
 import "./App.css";
-import HotelsContainer from "./containers/HotelsContainer";
+import BookingsContainer from "./containers/BookingsContainer.jsx";
 
 function App() {
   return (
     <>
-      <HotelsContainer />
+      <BookingsContainer />
     </>
   );
 }
