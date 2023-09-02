@@ -65,7 +65,6 @@ const BookingsForm = ({ addBooking }) => {
           type="checkbox"
           id="checkedIn"
           name="checkedIn"
-          //value={formData.checkedIn}
         />
       </div>
 

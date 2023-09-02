@@ -44,8 +44,6 @@ const createRouter = function (collection) {
   });
 
   router.put("/:id", (req, res) => {
-    console.log("req.params.id", req.params.id);
-    console.log("req.body", req.body);
     const { checkedIn } = req.body;
 
     collection

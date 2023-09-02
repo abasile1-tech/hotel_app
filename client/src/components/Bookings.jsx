@@ -14,7 +14,7 @@ const Bookings = ({ bookings, removeBooking, editBooking }) => {
   });
   return (
     <>
-      <h3>Here are the bookings:</h3>
+      <h2>Booking List</h2>
       {bookingsList}
     </>
   );

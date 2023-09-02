@@ -24,10 +24,7 @@ const BookingsContainer = () => {
       console.error("unable to find booking to update: " + id);
       return;
     }
-    console.log("bookings before:", JSON.stringify(bookings));
-    // bookings[indexToKeep] = booking;
     bookings.splice(indexToKeep, 1, booking);
-    console.log("bookings after:", JSON.stringify(bookings));
     setBookings([...bookings]);
   };
 
@@ -38,7 +35,6 @@ const BookingsContainer = () => {
 
   return (
     <>
-      <h1>Bookings go here: </h1>
       <BookingsForm addBooking={addBooking} />
       <Bookings
         bookings={bookings}

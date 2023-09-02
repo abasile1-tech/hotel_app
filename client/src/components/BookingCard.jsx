@@ -15,7 +15,7 @@ const BookingCard = ({ booking, removeBooking, editBooking }) => {
   };
   return (
     <>
-      <h1>{booking.name}</h1>
+      <h3>{booking.name}</h3>
       <p>Email: {booking.email}</p>
       <p>Checked In: {booking.checkedIn ? "yes" : "no"}</p>
       <button onClick={handleCheckIn}>
