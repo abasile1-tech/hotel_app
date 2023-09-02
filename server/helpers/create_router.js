@@ -43,6 +43,32 @@ const createRouter = function (collection) {
       });
   });
 
+  router.put("/:id", (req, res) => {
+    console.log("req.params.id", req.params.id);
+    console.log("req.body", req.body);
+    const { checkedIn } = req.body;
+
+    collection
+      .updateOne(
+        { _id: ObjectID(req.params.id) },
+        { $set: { checkedIn: checkedIn } }
+      )
+      .catch((err) => {
+        console.log(err);
+        res.status(500);
+        res.json({ status: 500, error: err });
+      });
+
+    collection
+      .findOne({ _id: ObjectID(req.params.id) })
+      .then((doc) => res.json(doc))
+      .catch((err) => {
+        console.log(err);
+        res.status(500);
+        res.json({ status: 500, error: err });
+      });
+  });
+
   router.delete("/:id", (req, res) => {
     collection
       .deleteOne({ _id: ObjectID(req.params.id) })

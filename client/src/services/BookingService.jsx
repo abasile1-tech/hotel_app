@@ -12,6 +12,14 @@ export const postBooking = (payload) => {
   }).then((res) => res.json());
 };
 
+export const putBooking = (checkedIn, id) => {
+  return fetch(baseURL + id, {
+    method: "PUT",
+    body: JSON.stringify({ checkedIn: checkedIn }),
+    headers: { "Content-Type": "application/json" },
+  }).then((res) => res.json());
+};
+
 export const deleteBooking = (id) => {
   return fetch(baseURL + id, {
     method: "DELETE",
